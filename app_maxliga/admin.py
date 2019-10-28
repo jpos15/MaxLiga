@@ -3,7 +3,7 @@ from .models import (Departamento,
                      Liga,
                      Colaborador,
                      TipoPonto,
-                     LancamentoPontuacao)
+                     LancamentoAvaliacao)
 
 
 @admin.register(Departamento)
@@ -26,6 +26,6 @@ class TipoPontoAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(LancamentoPontuacao)
-class LancamentoPontuacaoAdmin(admin.ModelAdmin):
+@admin.register(LancamentoAvaliacao)
+class LancamentoAvaliacaoAdmin(admin.ModelAdmin):
     readonly_fields = ('data_lancamento',)

@@ -27,7 +27,7 @@ class Colaborador(models.Model):
     maxcoins = models.FloatField('MaxCoins colaborador', blank=True, default=0)
 
     def __str__(self):
-        return self.nome + '\tPontos: ' + str(self.pontuacao) + '\tMaxCoins: ' + str(self.maxcoins)
+        return self.nome
 
 
 class TipoPonto(models.Model):
@@ -37,14 +37,14 @@ class TipoPonto(models.Model):
     data_cadastro = models.DateTimeField('Data de criação', auto_now_add=True)
 
     def __str__(self):
-        return 'Tipo de ponto: ' + str(self.nome) + '   - Pontos: ' + str(self.qtd_ponto) + '   - MaxCoins: ' + str(self.qtd_maxcoins)
+        return str(self.nome) + '   - Pontos: ' + str(self.qtd_ponto) + '   - MaxCoins: ' + str(self.qtd_maxcoins)
 
 
-class LancamentoPontuacao(models.Model):
+class LancamentoAvaliacao(models.Model):
     avaliador = models.ForeignKey(Colaborador, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Avaliador', related_name='avaliador_colaborador')
     colaborador = models.ForeignKey(Colaborador, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Colaborador', related_name='colaborador_colaborador')
     tipo_ponto = models.ForeignKey(TipoPonto, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Tipo de ponto')
-    descricao = models.TextField('Descrição do lançamento')
+    descricao = models.TextField('Descrição do lançamento', max_length=300)
     data_lancamento = models.DateTimeField('Data de criação', auto_now_add=True)
 
     def __str__(self):
