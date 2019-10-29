@@ -9,7 +9,7 @@
             </div>
 
             <div class="text-right">
-                <a href="{% url 'cadastrar_avaliacao' %}" class="btn btn-primary btn-block" role="button">Nova avaliação</a>
+                <a href="{% url 'cadastro_departamento' %}" class="btn btn-primary btn-block" role="button">Novo departamento</a>
             </div>
 
         </div>
@@ -18,16 +18,14 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">Colaborador</th>
-                    <th scope="col">Tipo avaliação</th>
+                    <th scope="col">Nome do colaborador</th>
                     <th class="text-right" scope="col">Ações</th>
                 </tr>
                 </thead>
-                {% for avaliacao in avaliacoes %}
+                {% for departamento in departamentos %}
                 <tbody>
                 <tr>
-                    <td>{{ avaliacao.colaborador }}</td>
-                    <td>{{ avaliacao.tipo_ponto }}</td>
+                    <td>{{ departamento.nome }}</td>
                     <td class="text-right">
                         <a href="#">
                             <i class="fas fa-pen fa-fw" style="color: rgb(50, 48, 155);"></i>

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Colaborador, TipoPonto, LancamentoAvaliacao, Liga
-from .forms import LancamentoAvaliacaoForm, TipoPontoForm, LigaForm
+from .models import Colaborador, TipoPonto, LancamentoAvaliacao, Liga, Departamento
+from .forms import LancamentoAvaliacaoForm, TipoPontoForm, LigaForm, ColaboradorForm, DepartamentoForm
 from django.contrib.auth.decorators import login_required, permission_required
 
 
@@ -29,7 +29,6 @@ def home(request):
         'maxcoins_atual': maxcoins_atual,
         'qtd_avaliacoes_realizadas': qtd_avaliacoes_realizadas
     }
-
     return render(request, 'app_maxliga/home.html', data)
 
 
@@ -43,15 +42,18 @@ def lista_avaliacoes(request):
     user = request.user.id
     colaborador = Colaborador.objects.get(usuario=user)
 
+    avaliacoes = LancamentoAvaliacao.objects.all()
+
     data = {
-        'colaborador': colaborador
+        'colaborador': colaborador,
+        'avaliacoes': avaliacoes
     }
 
     return render(request, 'app_maxliga/lista_avaliacoes.html', data)
 
 
 @login_required
-def nova_avaliacao(request):
+def cadastrar_avaliacao(request):
 
     # Recupera o ID do usuáio autenticado
     user = request.user.id
@@ -61,19 +63,29 @@ def nova_avaliacao(request):
     colaborador = Colaborador.objects.get(usuario=user)
     print('Id Colaborador logado = ', colaborador.id)
 
-
     if request.method == 'POST':
         form = LancamentoAvaliacaoForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
 
-            print('Id user colaborador selecionado', post.colaborador.usuario.id)
-            print('Id colaborador selecionado', post.colaborador.id)
-            print('Qtd pontos colaborador selecionado', post.colaborador.pontuacao)
-            print(post.tipo_ponto.qtd_ponto)
+            colaborador_avaliado = Colaborador.objects.get(id=post.colaborador.id)
+            print('colaborador_avaliado', colaborador_avaliado)
+
+            colaborador_avaliado.pontuacao += post.tipo_ponto.qtd_ponto
+            colaborador_avaliado.save()
+
+            post.save()
+            return redirect('lista_avaliacoes')
+
 
     form = LancamentoAvaliacaoForm
-    return render(request, 'app_maxliga/nova_avaliacao.html', {'form': form, 'colaborador': colaborador})
+
+    data = {
+        'form': form,
+        'colaborador': colaborador
+    }
+
+    return render(request, 'app_maxliga/nova_avaliacao.html', data)
 
 
 @login_required
@@ -122,13 +134,13 @@ def lista_liga(request):
     user = request.user.id
     colaborador = Colaborador.objects.get(usuario=user)
 
-    liga = Liga.objects.all()
+    ligas = Liga.objects.all()
 
-    print(liga)
+    print(ligas)
 
     data = {
         'colaborador': colaborador,
-        'liga': liga
+        'ligas': ligas
     }
     return render(request, 'app_maxliga/lista_liga.html', data)
 
@@ -171,3 +183,66 @@ def lista_colaboradores(request):
         'colaboradores': colaboradores
     }
     return render(request, 'app_maxliga/lista_colaboradores.html', data)
+
+
+@login_required
+def cadastro_colaborador(request):
+    form = ColaboradorForm
+
+    # Recupera o ID do usuáio autenticado
+    user = request.user.id
+    print('Usuário logado', user)
+
+    # Recupera a instancia do funcionário buscando pelo o usuário logado
+    colaborador = Colaborador.objects.get(usuario=user)
+    print('Id Colaborador logado = ', colaborador.id)
+
+    if request.method == 'POST':
+        form = ColaboradorForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return redirect('lista_liga')
+
+        else:
+            form = ColaboradorForm
+    return render(request, 'app_maxliga/cadastro_colaborador.html', {'form': form, 'colaborador': colaborador})
+
+
+@login_required
+def lista_departamentos(request):
+    user = request.user.id
+    colaborador = Colaborador.objects.get(usuario=user)
+
+    departamentos = Departamento.objects.all()
+
+    print(departamentos)
+
+    data = {
+        'colaborador': colaborador,
+        'departamentos': departamentos
+    }
+    return render(request, 'app_maxliga/lista_departamentos.html', data)
+
+
+def cadastro_departamento(request):
+    form = DepartamentoForm
+
+    # Recupera o ID do usuáio autenticado
+    user = request.user.id
+    print('Usuário logado', user)
+
+    # Recupera a instancia do funcionário buscando pelo o usuário logado
+    colaborador = Colaborador.objects.get(usuario=user)
+    print('Id Colaborador logado = ', colaborador.id)
+
+    if request.method == 'POST':
+        form = DepartamentoForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return redirect('lista_liga')
+
+        else:
+            form = DepartamentoForm
+    return render(request, 'app_maxliga/cadastro_departamento.html', {'form': form, 'colaborador': colaborador})

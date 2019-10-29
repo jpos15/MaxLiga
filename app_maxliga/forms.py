@@ -1,5 +1,5 @@
 from django import forms
-from .models import LancamentoAvaliacao, TipoPonto, Liga, Colaborador
+from .models import LancamentoAvaliacao, TipoPonto, Liga, Colaborador, Departamento
 
 
 class LancamentoAvaliacaoForm(forms.ModelForm):
@@ -43,4 +43,13 @@ class ColaboradorForm(forms.ModelForm):
             'nome': forms.TextInput(attrs={'class': 'form-control'}),
             'departamento': forms.Select(attrs={'class': 'form-control'}),
             'liga': forms.Select(attrs={'class': 'form-control'})
+        }
+
+
+class DepartamentoForm(forms.ModelForm):
+    class Meta:
+        model = Departamento
+        fields = ('nome', )
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'form-control'}),
         }

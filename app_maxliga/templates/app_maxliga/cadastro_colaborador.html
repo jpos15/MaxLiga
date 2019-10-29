@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+    {% block BodyHeading %}
+    {% if colaborador.departamento.admin == True %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary" type="submit">Salvar</button>
+        <a class="btn btn-danger" href="{% url 'lista_liga' %}">Cancelar</a>
+    </form>
+    {% endif %}
+    {% endblock %}
