@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Blank</title>
+  <title>MaxLiga</title>
 
   <!-- Custom fonts for this template-->
   <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -67,13 +67,13 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Cadastros:</h6>
             <a class="collapse-item" href="{% url 'lista_avaliacoes' %}">Avaliação</a>
-            <a class="collapse-item" href="#">Ligas</a>
-            <a class="collapse-item" href="#">Tipo avaliações</a>
-            <a class="collapse-item" href="#">Colaboradores</a>
+            <a class="collapse-item" href="{% url 'lista_tipo_ponto' %}">Tipo ponto</a>
+            <a class="collapse-item" href="{% url 'lista_liga' %}">Ligas</a>
+            <a class="collapse-item" href="{% url 'lista_colaboradores' %}">Colaboradores</a>
           </div>
         </div>
       </li>
-
+      {% endif %}
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
@@ -83,13 +83,10 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="#">Relatório 1</a>
-            <a class="collapse-item" href="#">Relatório 2</a>
-            <a class="collapse-item" href="#">Relatório 3</a>
+            <a class="collapse-item" href="#">Minhas avaliações</a>
           </div>
         </div>
       </li>
-      {% endif %}
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -225,10 +222,10 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">Selecione "Sair" abaixo se você estiver pronto para encerrar sua sessão atual.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+          <a class="btn btn-primary" href="{% url 'logout' %}">Sair</a>
         </div>
       </div>
     </div>

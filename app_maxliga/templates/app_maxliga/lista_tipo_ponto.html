@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+  {% block BodyHeading %}
+  {% if colaborador.departamento.admin == True %}
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+          <h5>Tipo de pontos - {{colaborador}}</h5>
+        </div>
+
+        <div class="text-right">
+          <a href="{% url 'cadastro_tipo_ponto' %}" class="btn btn-primary btn-block" role="button">Novo tipo de ponto</a>
+        </div>
+
+      </div>
+
+      <div class="row" style="margin-top:80px;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Tipo de ponto</th>
+              <th scope="col">Pontos</th>
+              <th scope="col">MaxCoins</th>
+              <th class="text-right" scope="col">Ações</th>
+            </tr>
+          </thead>
+          {% for ponto in tipo_ponto %}
+          <tbody>
+            <tr>
+              <td>{{ ponto.nome }}</td>
+              <td>{{ ponto.qtd_ponto }}</td>
+              <td>{{ ponto.qtd_maxcoins }}</td>
+              <td class="text-right">
+                <a href="#">
+                  <i class="fas fa-pen fa-fw" style="color: rgb(50, 48, 155);"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-trash fa-fw" style="color: rgb(230, 17, 17);"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+      </div>
+
+    </div>
+  {% endif %}
+{% endblock %}
