@@ -1,6 +1,12 @@
 (function($) {
   "use strict"; // Start of use strict
 
+    $("#content").on('click', function(e) {
+	  if ($("div.collapse").hasClass("show")) {
+		$('div.collapse').collapse('hide');
+    };
+  });
+
   // Toggle the side navigation
   $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
     $("body").toggleClass("sidebar-toggled");
