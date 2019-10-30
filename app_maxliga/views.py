@@ -19,7 +19,7 @@ def home(request):
     pontuaca_atual = colaborador.pontuacao
     print('pontuaca_atual' , pontuaca_atual)
 
-    maxcoins_atual = colaborador.pontuacao
+    maxcoins_atual = colaborador.maxcoins
     print('maxcoins_atual', maxcoins_atual)
 
     data = {
@@ -70,8 +70,13 @@ def cadastrar_avaliacao(request):
 
             colaborador_avaliado = Colaborador.objects.get(id=post.colaborador.id)
             print('colaborador_avaliado', colaborador_avaliado)
+            print('colaborador_avaliado.pontuacao', colaborador_avaliado.pontuacao)
+            print('colaborador_avaliado.maxcoins', colaborador_avaliado.maxcoins)
 
             colaborador_avaliado.pontuacao += post.tipo_ponto.qtd_ponto
+            colaborador_avaliado.save()
+
+            colaborador_avaliado.maxcoins += post.tipo_ponto.qtd_maxcoins
             colaborador_avaliado.save()
 
             post.avaliador = colaborador
