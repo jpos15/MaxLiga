@@ -253,3 +253,18 @@ def cadastro_departamento(request):
         else:
             form = DepartamentoForm
     return render(request, 'app_maxliga/cadastro_departamento.html', {'form': form, 'colaborador': colaborador})
+
+
+def minhas_avaliacoes(request):
+    user = request.user.id
+    colaborador = Colaborador.objects.get(usuario=user)
+
+    avaliacoes = LancamentoAvaliacao.objects.filter(colaborador=colaborador)
+    print(avaliacoes)
+
+    data = {
+        'colaborador': colaborador,
+        'avaliacoes': avaliacoes
+    }
+
+    return render(request, 'app_maxliga/minhas_avaliacoes.html', data)

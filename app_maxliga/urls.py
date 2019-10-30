@@ -2,15 +2,17 @@ from django.urls import path
 from .views import (
     cadastrar_avaliacao, home, base, lista_avaliacoes, lista_tipo_ponto,
     cadastro_tipo_ponto, lista_liga, cadastro_liga, lista_colaboradores,
-    cadastro_colaborador, lista_departamentos, cadastro_departamento
+    cadastro_colaborador, lista_departamentos, cadastro_departamento,
+    minhas_avaliacoes
     )
 
 
 urlpatterns = [
     path('', home, name='home'),
     path('base/', base),
-    path('avaliacoes/minhas-avaliacoes/', lista_avaliacoes, name='lista_avaliacoes'),
+    path('avaliacoes//', lista_avaliacoes, name='lista_avaliacoes'),
     path('avaliacoes/nova-avaliacao/', cadastrar_avaliacao, name='cadastrar_avaliacao'),
+    path('avaliacoes/minhas-avaliacoes/', minhas_avaliacoes, name='minhas_avaliacoes'),
     path('tipo-ponto/', lista_tipo_ponto, name='lista_tipo_ponto'),
     path('tipo-ponto/novo-tipo-ponto/', cadastro_tipo_ponto, name='cadastro_tipo_ponto'),
     path('liga/', lista_liga, name='lista_liga'),
