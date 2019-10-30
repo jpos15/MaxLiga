@@ -74,6 +74,8 @@ def cadastrar_avaliacao(request):
             colaborador_avaliado.pontuacao += post.tipo_ponto.qtd_ponto
             colaborador_avaliado.save()
 
+            post.avaliador = colaborador
+
             post.save()
             return redirect('lista_avaliacoes')
 
