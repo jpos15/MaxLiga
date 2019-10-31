@@ -42,14 +42,19 @@ def lista_avaliacoes(request):
     user = request.user.id
     colaborador = Colaborador.objects.get(usuario=user)
 
-    avaliacoes = LancamentoAvaliacao.objects.all()
+    # Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-    data = {
-        'colaborador': colaborador,
-        'avaliacoes': avaliacoes
-    }
+        avaliacoes = LancamentoAvaliacao.objects.all()
 
-    return render(request, 'app_maxliga/lista_avaliacoes.html', data)
+        data = {
+            'colaborador': colaborador,
+            'avaliacoes': avaliacoes
+        }
+
+        return render(request, 'app_maxliga/lista_avaliacoes.html', data)
+    else:
+        return redirect('home')
 
 
 @login_required
@@ -63,36 +68,41 @@ def cadastrar_avaliacao(request):
     colaborador = Colaborador.objects.get(usuario=user)
     print('Id Colaborador logado = ', colaborador.id)
 
-    if request.method == 'POST':
-        form = LancamentoAvaliacaoForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
+    # Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-            colaborador_avaliado = Colaborador.objects.get(id=post.colaborador.id)
-            print('colaborador_avaliado', colaborador_avaliado)
-            print('colaborador_avaliado.pontuacao', colaborador_avaliado.pontuacao)
-            print('colaborador_avaliado.maxcoins', colaborador_avaliado.maxcoins)
+        if request.method == 'POST':
+            form = LancamentoAvaliacaoForm(request.POST)
+            if form.is_valid():
+                post = form.save(commit=False)
 
-            colaborador_avaliado.pontuacao += post.tipo_ponto.qtd_ponto
-            colaborador_avaliado.save()
+                colaborador_avaliado = Colaborador.objects.get(id=post.colaborador.id)
+                print('colaborador_avaliado', colaborador_avaliado)
+                print('colaborador_avaliado.pontuacao', colaborador_avaliado.pontuacao)
+                print('colaborador_avaliado.maxcoins', colaborador_avaliado.maxcoins)
 
-            colaborador_avaliado.maxcoins += post.tipo_ponto.qtd_maxcoins
-            colaborador_avaliado.save()
+                colaborador_avaliado.pontuacao += post.tipo_ponto.qtd_ponto
+                colaborador_avaliado.save()
 
-            post.avaliador = colaborador
+                colaborador_avaliado.maxcoins += post.tipo_ponto.qtd_maxcoins
+                colaborador_avaliado.save()
 
-            post.save()
-            return redirect('lista_avaliacoes')
+                post.avaliador = colaborador
+
+                post.save()
+                return redirect('lista_avaliacoes')
 
 
-    form = LancamentoAvaliacaoForm
+        form = LancamentoAvaliacaoForm
 
-    data = {
-        'form': form,
-        'colaborador': colaborador
-    }
+        data = {
+            'form': form,
+            'colaborador': colaborador
+        }
 
-    return render(request, 'app_maxliga/nova_avaliacao.html', data)
+        return render(request, 'app_maxliga/nova_avaliacao.html', data)
+    else:
+        return redirect('home')
 
 
 @login_required
@@ -100,40 +110,45 @@ def lista_tipo_ponto(request):
     user = request.user.id
     colaborador = Colaborador.objects.get(usuario=user)
 
-    tipo_ponto = TipoPonto.objects.all()
+    # Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-    print(tipo_ponto)
+        tipo_ponto = TipoPonto.objects.all()
 
-    data = {
-        'colaborador': colaborador,
-        'tipo_ponto': tipo_ponto
-    }
+        print(tipo_ponto)
 
-    return render(request, 'app_maxliga/lista_tipo_ponto.html', data)
+        data = {
+            'colaborador': colaborador,
+            'tipo_ponto': tipo_ponto
+        }
+
+        return render(request, 'app_maxliga/lista_tipo_ponto.html', data)
+    return redirect('home')
 
 
 @login_required
 def cadastro_tipo_ponto(request):
     form = TipoPontoForm
 
-    # Recupera o ID do usuáio autenticado
     user = request.user.id
-    print('Usuário logado', user)
 
-    # Recupera a instancia do funcionário buscando pelo o usuário logado
     colaborador = Colaborador.objects.get(usuario=user)
-    print('Id Colaborador logado = ', colaborador.id)
 
-    if request.method == 'POST':
-        form = TipoPontoForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
-            return redirect('lista_tipo_ponto')
+    #Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-        else:
-            form = TipoPontoForm
-    return render(request, 'app_maxliga/cadastro_tipo_ponto.html', {'form': form, 'colaborador': colaborador})
+        if request.method == 'POST':
+            form = TipoPontoForm(request.POST)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.save()
+                return redirect('lista_tipo_ponto')
+
+            else:
+                form = TipoPontoForm
+        return render(request, 'app_maxliga/cadastro_tipo_ponto.html', {'form': form, 'colaborador': colaborador})
+    else:
+        return redirect('home')
 
 
 @login_required
@@ -141,39 +156,45 @@ def lista_liga(request):
     user = request.user.id
     colaborador = Colaborador.objects.get(usuario=user)
 
-    ligas = Liga.objects.all()
+    # Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-    print(ligas)
+        ligas = Liga.objects.all()
 
-    data = {
-        'colaborador': colaborador,
-        'ligas': ligas
-    }
-    return render(request, 'app_maxliga/lista_liga.html', data)
+        print(ligas)
+
+        data = {
+            'colaborador': colaborador,
+            'ligas': ligas
+        }
+        return render(request, 'app_maxliga/lista_liga.html', data)
+    else:
+        return redirect('home')
 
 
 @login_required
 def cadastro_liga(request):
     form = LigaForm
 
-    # Recupera o ID do usuáio autenticado
     user = request.user.id
-    print('Usuário logado', user)
 
-    # Recupera a instancia do funcionário buscando pelo o usuário logado
     colaborador = Colaborador.objects.get(usuario=user)
-    print('Id Colaborador logado = ', colaborador.id)
 
-    if request.method == 'POST':
-        form = LigaForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
-            return redirect('lista_liga')
+    # Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-        else:
-            form = LigaForm
-    return render(request, 'app_maxliga/cadastro_liga.html', {'form': form, 'colaborador': colaborador})
+        if request.method == 'POST':
+            form = LigaForm(request.POST)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.save()
+                return redirect('lista_liga')
+
+            else:
+                form = LigaForm
+        return render(request, 'app_maxliga/cadastro_liga.html', {'form': form, 'colaborador': colaborador})
+    else:
+        return redirect('home')
 
 
 @login_required
@@ -183,37 +204,41 @@ def lista_colaboradores(request):
 
     colaboradores = Colaborador.objects.all()
 
-    print(colaboradores)
+    # Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-    data = {
-        'colaborador': colaborador,
-        'colaboradores': colaboradores
-    }
-    return render(request, 'app_maxliga/lista_colaboradores.html', data)
+        data = {
+            'colaborador': colaborador,
+            'colaboradores': colaboradores
+        }
+        return render(request, 'app_maxliga/lista_colaboradores.html', data)
+    else:
+        return redirect('home')
 
 
 @login_required
 def cadastro_colaborador(request):
     form = ColaboradorForm
 
-    # Recupera o ID do usuáio autenticado
     user = request.user.id
-    print('Usuário logado', user)
 
-    # Recupera a instancia do funcionário buscando pelo o usuário logado
     colaborador = Colaborador.objects.get(usuario=user)
-    print('Id Colaborador logado = ', colaborador.id)
 
-    if request.method == 'POST':
-        form = ColaboradorForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
-            return redirect('lista_liga')
+    # Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-        else:
-            form = ColaboradorForm
-    return render(request, 'app_maxliga/cadastro_colaborador.html', {'form': form, 'colaborador': colaborador})
+        if request.method == 'POST':
+            form = ColaboradorForm(request.POST)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.save()
+                return redirect('lista_liga')
+
+            else:
+                form = ColaboradorForm
+        return render(request, 'app_maxliga/cadastro_colaborador.html', {'form': form, 'colaborador': colaborador})
+    else:
+        return redirect('home')
 
 
 @login_required
@@ -221,40 +246,46 @@ def lista_departamentos(request):
     user = request.user.id
     colaborador = Colaborador.objects.get(usuario=user)
 
-    departamentos = Departamento.objects.all()
+    # Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-    print(departamentos)
+        departamentos = Departamento.objects.all()
 
-    data = {
-        'colaborador': colaborador,
-        'departamentos': departamentos
-    }
-    return render(request, 'app_maxliga/lista_departamentos.html', data)
+        data = {
+            'colaborador': colaborador,
+            'departamentos': departamentos
+        }
+        return render(request, 'app_maxliga/lista_departamentos.html', data)
+    else:
+        return redirect('home')
 
 
+@login_required
 def cadastro_departamento(request):
     form = DepartamentoForm
 
-    # Recupera o ID do usuáio autenticado
     user = request.user.id
-    print('Usuário logado', user)
 
-    # Recupera a instancia do funcionário buscando pelo o usuário logado
     colaborador = Colaborador.objects.get(usuario=user)
-    print('Id Colaborador logado = ', colaborador.id)
 
-    if request.method == 'POST':
-        form = DepartamentoForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
-            return redirect('lista_liga')
+    # Para validar se o colaborador que está logado tem permissão de acessar a tela
+    if colaborador.departamento.admin == True:
 
-        else:
-            form = DepartamentoForm
-    return render(request, 'app_maxliga/cadastro_departamento.html', {'form': form, 'colaborador': colaborador})
+        if request.method == 'POST':
+            form = DepartamentoForm(request.POST)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.save()
+                return redirect('lista_liga')
+
+            else:
+                form = DepartamentoForm
+        return render(request, 'app_maxliga/cadastro_departamento.html', {'form': form, 'colaborador': colaborador})
+    else:
+        return redirect('home')
 
 
+@login_required
 def minhas_avaliacoes(request):
     user = request.user.id
     colaborador = Colaborador.objects.get(usuario=user)
@@ -269,6 +300,7 @@ def minhas_avaliacoes(request):
     return render(request, 'app_maxliga/minhas_avaliacoes.html', data)
 
 
+@login_required
 def minhas_ligas(request):
     user = request.user.id
     colaborador = Colaborador.objects.get(usuario=user)

@@ -22,8 +22,24 @@
                         <p>{{ avaliacao.descricao|linebreaks }}</p>
                     </div>
                     <div class="row col">
-                        <p>{{ avaliacao.tipo_ponto.qtd_ponto }} Pontos</p>
-                        <p style="margin-left:50px;">{{ avaliacao.tipo_ponto.qtd_maxcoins }} MaxCoins</p>
+
+                        {% if avaliacao.tipo_ponto.qtd_ponto > 0 %}
+                            <p>+{{ avaliacao.tipo_ponto.qtd_ponto }} Pontos</p>
+                        {% elif avaliacao.tipo_ponto.qtd_ponto == 0 %}
+                            <p>{{ avaliacao.tipo_ponto.qtd_ponto }} Pontos</p>
+                        {% else %}
+                            <p style="color:red;">{{ avaliacao.tipo_ponto.qtd_ponto }} Pontos</p>
+                        {% endif %}
+
+
+                        {% if avaliacao.tipo_ponto.qtd_maxcoins > 0 %}
+                            <p style="margin-left:50px;">+{{ avaliacao.tipo_ponto.qtd_maxcoins }} MaxCoins</p>
+                        {% elif avaliacao.tipo_ponto.qtd_maxcoins == 0 %}
+                            <p style="margin-left:50px;">{{ avaliacao.tipo_ponto.qtd_maxcoins }} MaxCoins</p>
+                        {% else %}
+                            <p style="margin-left:50px; color:red;">{{ avaliacao.tipo_ponto.qtd_maxcoins }} MaxCoins</p>
+                        {% endif %}
+
                     </div>
                 </li>
                 <br>

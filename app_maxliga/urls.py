@@ -10,7 +10,7 @@ from .views import (
 urlpatterns = [
     path('', home, name='home'),
     path('base/', base),
-    path('avaliacoes//', lista_avaliacoes, name='lista_avaliacoes'),
+    path('avaliacoes/', lista_avaliacoes, name='lista_avaliacoes'),
     path('avaliacoes/nova-avaliacao/', cadastrar_avaliacao, name='cadastrar_avaliacao'),
     path('avaliacoes/minhas-avaliacoes/', minhas_avaliacoes, name='minhas_avaliacoes'),
     path('tipo-ponto/', lista_tipo_ponto, name='lista_tipo_ponto'),
