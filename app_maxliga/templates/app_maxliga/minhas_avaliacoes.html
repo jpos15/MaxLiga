@@ -1,21 +1,32 @@
 {% extends 'base.html' %}
 {% block BodyHeading %}
 <div class="container">
+    <h5>Timeline pontuações lançadas para {{ colaborador.nome }}</h5>
+    <br>
+    <hr>
+    <br>
     <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-md-10 offset-md-1">
             <ul class="timeline">
                 {% for avaliacao in avaliacoes %}
                 <li>
                     <div class="row">
                         <div class="col">
-                            <p>{{ avaliacao.tipo_ponto.nome }}</p>
+                            <p> Ponto: {{ avaliacao.tipo_ponto.nome }}</p>
                         </div>
                         <div class="text-right">
-                            <a class="float-right">{{ avaliacao.data_lancamento }}</a>
+                            <p>{{ avaliacao.data_lancamento }}</p>
                         </div>
                     </div>
-                    <p><b>Descriçaõ: </b>{{ avaliacao.descricao }}</p>
+                    <div class="row col">
+                        <p>{{ avaliacao.descricao|linebreaks }}</p>
+                    </div>
+                    <div class="row col">
+                        <p>{{ avaliacao.tipo_ponto.qtd_ponto }} Pontos</p>
+                        <p style="margin-left:50px;">{{ avaliacao.tipo_ponto.qtd_maxcoins }} MaxCoins</p>
+                    </div>
                 </li>
+                <br>
                 {% endfor %}
             </ul>
         </div>

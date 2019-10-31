@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block BodyHeading %}
+        <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <h5>Ligas - {{colaborador}}</h5>
+            </div>
+
+        </div>
+
+        <div class="row" style="margin-top:80px;">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Nome da liga</th>
+                    <th class="text-right" scope="col"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{ colaborador.liga }}</td>
+                    <td class="text-right">
+                        <a href="#">
+                            <i class="fas fa-angle-right fa-fw" style="color: rgb(50, 48, 155);"></i>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

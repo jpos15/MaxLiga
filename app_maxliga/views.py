@@ -260,7 +260,6 @@ def minhas_avaliacoes(request):
     colaborador = Colaborador.objects.get(usuario=user)
 
     avaliacoes = LancamentoAvaliacao.objects.filter(colaborador=colaborador)
-    print(avaliacoes)
 
     data = {
         'colaborador': colaborador,
@@ -268,3 +267,18 @@ def minhas_avaliacoes(request):
     }
 
     return render(request, 'app_maxliga/minhas_avaliacoes.html', data)
+
+
+def minhas_ligas(request):
+    user = request.user.id
+    colaborador = Colaborador.objects.get(usuario=user)
+
+    ranking_liga = Colaborador.objects.filter(liga=1).order_by('-pontuacao')
+    print(ranking_liga)
+
+    data = {
+        'colaborador': colaborador,
+        'ranking_liga': ranking_liga
+    }
+
+    return render(request, 'app_maxliga/minhas_ligas.html', data)

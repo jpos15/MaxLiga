@@ -63,7 +63,7 @@ ul.timeline > li:before {
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'home' %}">
         <div class="sidebar-brand-icon">
-          <i class="fas fa-fighter-jet"></i>
+          <i class="fas fa-hand-spock"></i>
         </div>
         <div class="sidebar-brand-text mx-3">MaxLiga</div>
       </a>
@@ -109,13 +109,27 @@ ul.timeline > li:before {
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-table"></i>
+          <i class="fas fa-fw fa-stream"></i>
           <span>Avaliações</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
+            <h6 class="collapse-header">Avaliações:</h6>
             <a class="collapse-item" href="{% url 'minhas_avaliacoes' %}">Minhas avaliações</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRanking" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-flag"></i>
+          <span>Liga</span>
+        </a>
+        <div id="collapseRanking" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Liga:</h6>
+            <a class="collapse-item" href="{% url 'minhas_ligas' %}">Minha liga</a>
           </div>
         </div>
       </li>
