@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6975976-1a1a-4c51-bc80-a81198b15406" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MaxLiga.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MaxLiga.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/ranking_liga.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/ranking_liga.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_maxliga/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,28 +63,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1589" />
+          <entry key="html" value="1625" />
           <entry key="js" value="2" />
           <entry key="py" value="3229" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1589" />
+          <entry key="HTML" value="1625" />
           <entry key="JavaScript" value="2" />
           <entry key="Python" value="3229" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="56" />
+          <entry key="html" value="58" />
           <entry key="js" value="2" />
           <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="56" />
+          <entry key="HTML" value="58" />
           <entry key="JavaScript" value="2" />
           <entry key="Python" value="9" />
         </counts>
@@ -97,13 +94,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_maxliga/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_maxliga/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="571" column="16" selection-start-line="571" selection-start-column="16" selection-end-line="571" selection-end-column="16" />
+            <state relative-caret-position="-8691">
+              <caret line="47" column="52" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="52" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_maxliga/templates/registration/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -135,7 +150,6 @@
         <option value="$PROJECT_DIR$/app_maxliga/admin.py" />
         <option value="$PROJECT_DIR$/app_maxliga/static/js/sb-admin-2.js" />
         <option value="$PROJECT_DIR$/projeto_maxliga/settings.py" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/sem_permissao.html" />
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_avaliacoes.html" />
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_avaliacoes.html" />
@@ -159,9 +173,10 @@
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_ligas.html" />
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_avaliacao_confirm.html" />
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_colaboradores.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/base.html" />
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/ranking_liga.html" />
         <option value="$PROJECT_DIR$/app_maxliga/views.py" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/base.html" />
       </list>
     </option>
   </component>
@@ -195,6 +210,19 @@
               <item name="MaxLiga" type="b2602c69:ProjectViewProjectNode" />
               <item name="MaxLiga" type="462c0819:PsiDirectoryNode" />
               <item name="app_maxliga" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MaxLiga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MaxLiga" type="462c0819:PsiDirectoryNode" />
+              <item name="app_maxliga" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MaxLiga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MaxLiga" type="462c0819:PsiDirectoryNode" />
+              <item name="app_maxliga" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -202,7 +230,7 @@
               <item name="MaxLiga" type="462c0819:PsiDirectoryNode" />
               <item name="app_maxliga" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="app_maxliga" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -216,12 +244,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga\templates" />
-      <recent name="D:\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JoaoPaulo\Desktop\Estudo\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga\static\img" />
+      <recent name="D:\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga\templates" />
+      <recent name="D:\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -316,13 +345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="15" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -481,13 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="210" column="20" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/ranking_liga.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
@@ -497,11 +512,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_maxliga/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="571" column="16" selection-start-line="571" selection-start-column="16" selection-end-line="571" selection-end-column="16" />
+        <state relative-caret-position="-8691">
+          <caret line="47" column="52" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="52" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
         </state>
       </provider>
     </entry>
