@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block BodyHeading %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        <h5> Você está certo que deseja excluir a avaliação do colaborador {{ avaliacao.colaborador.nome }}?</h5>
+        <p> A pontuação gerada da avaliação sera descontada da pontuação atual do colaborador, assim também como os MaxCoins </p>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-danger" type="submit">Excluir</button>
+                <a class="btn btn-secondary" href="{% url 'lista_avaliacoes' %}">Cancelar</a>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

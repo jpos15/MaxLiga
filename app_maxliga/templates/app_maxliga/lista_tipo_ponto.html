@@ -31,10 +31,10 @@
               <td>{{ ponto.qtd_ponto }}</td>
               <td>{{ ponto.qtd_maxcoins }}</td>
               <td class="text-right">
-                <a href="#">
+                <a href="{% url 'atualizar_tipo_ponto' ponto.id %}">
                   <i class="fas fa-pen fa-fw" style="color: rgb(50, 48, 155);"></i>
                 </a>
-                <a href="#">
+                <a href="{% url 'excluir_tipo_ponto' ponto.id %}">
                   <i class="fas fa-trash fa-fw" style="color: rgb(230, 17, 17);"></i>
                 </a>
               </td>

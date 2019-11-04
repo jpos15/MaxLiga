@@ -29,10 +29,7 @@
                     <td>{{ avaliacao.colaborador }}</td>
                     <td>{{ avaliacao.tipo_ponto }}</td>
                     <td class="text-right">
-                        <a href="#">
-                            <i class="fas fa-pen fa-fw" style="color: rgb(50, 48, 155);"></i>
-                        </a>
-                        <a href="#">
+                        <a href="{% url 'excluir_avaliacao' avaliacao.id %}">
                             <i class="fas fa-trash fa-fw" style="color: rgb(230, 17, 17);"></i>
                         </a>
                     </td>

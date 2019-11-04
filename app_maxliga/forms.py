@@ -49,7 +49,8 @@ class ColaboradorForm(forms.ModelForm):
 class DepartamentoForm(forms.ModelForm):
     class Meta:
         model = Departamento
-        fields = ('nome', )
+        fields = ('nome', 'admin')
         widgets = {
             'nome': forms.TextInput(attrs={'class': 'form-control'}),
+            'admin': forms.CheckboxInput(attrs={'class': 'form-check-label'}),
         }

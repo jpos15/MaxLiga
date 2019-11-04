@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 {% block BodyHeading %}
-        <div class="container">
+<div class="container">
 
-        <div class="row">
-            <div class="col">
-                <h5>Ligas - {{colaborador}}</h5>
-            </div>
-
+    <div class="row">
+        <div class="col">
+            <h5>Ligas - {{colaborador}}</h5>
         </div>
 
+    </div>
+    {% if colaborador.liga == Null %}
+        <br>
+        <br>
+        <h6>Desculpe, voce não faz parte de nenhuma liga</h6>
+    {% else %}
         <div class="row" style="margin-top:80px;">
             <table class="table">
                 <thead>
@@ -21,7 +25,7 @@
                 <tr>
                     <td>{{ colaborador.liga }}</td>
                     <td class="text-right">
-                        <a href="#">
+                        <a href="{% url 'ranking_liga' colaborador.liga.id %}">
                             <i class="fas fa-angle-right fa-fw" style="color: rgb(50, 48, 155);"></i>
                         </a>
                     </td>
@@ -29,5 +33,6 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    {% endif %}
+</div>
 {% endblock %}

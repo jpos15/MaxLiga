@@ -18,7 +18,8 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">Nome do colaborador</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Departamento</th>
                     <th scope="col">Liga do colaborador</th>
                     <th class="text-right" scope="col">Ações</th>
                 </tr>
@@ -27,12 +28,13 @@
                 <tbody>
                 <tr>
                     <td>{{ colaborador.nome }}</td>
+                    <td>{{ colaborador.departamento }}</td>
                     <td>{{ colaborador.liga.nome }}</td>
                     <td class="text-right">
-                        <a href="#">
+                        <a href="{% url 'atualizar_colaborador' colaborador.id %}">
                             <i class="fas fa-pen fa-fw" style="color: rgb(50, 48, 155);"></i>
                         </a>
-                        <a href="#">
+                        <a href="{% url 'excluir_colaborador' colaborador.id %}">
                             <i class="fas fa-trash fa-fw" style="color: rgb(230, 17, 17);"></i>
                         </a>
                     </td>

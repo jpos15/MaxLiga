@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6975976-1a1a-4c51-bc80-a81198b15406" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/MaxLiga.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MaxLiga.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_avaliacoes.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_avaliacoes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_colaborador.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_colaborador.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_departamento.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_departamento.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_liga.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_liga.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_tipo_ponto.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_tipo_ponto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_avaliacoes.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_avaliacoes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_colaboradores.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_colaboradores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_departamentos.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_departamentos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_liga.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_liga.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_tipo_ponto.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_tipo_ponto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_ligas.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_ligas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/nova_avaliacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/nova_avaliacao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_maxliga/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_maxliga/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_maxliga/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_maxliga/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
@@ -18,32 +32,34 @@
     <session id="1061628608">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="8" />
-          <entry key="py" value="15" />
+          <entry key="html" value="63" />
+          <entry key="py" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="8" />
-          <entry key="Python" value="15" />
+          <entry key="HTML" value="63" />
+          <entry key="Python" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="404" />
-          <entry key="py" value="1673" />
+          <entry key="html" value="2071" />
+          <entry key="py" value="2664" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="404" />
-          <entry key="Python" value="1673" />
+          <entry key="HTML" value="2071" />
+          <entry key="Python" value="2664" />
         </counts>
       </usages-collector>
     </session>
@@ -92,53 +108,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_maxliga/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="131" column="64" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_maxliga/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_maxliga/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5372">
-              <caret line="316" lean-forward="true" selection-start-line="316" selection-end-line="316" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-                <marker date="1572533371389" expanded="true" signature="348:351" ph="..." />
-                <marker date="1572533371389" expanded="true" signature="7903:7904" ph="..." />
-                <marker date="1572533371389" expanded="true" signature="8908:8913" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_avaliacoes.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#p#1;n#div#2;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#2;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#4;n#div#2;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#3;n#div#2;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="218">
+              <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -168,24 +142,35 @@
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/home.html" />
         <option value="$PROJECT_DIR$/app_maxliga/models.py" />
         <option value="$PROJECT_DIR$/app_maxliga/admin.py" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_liga.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_colaborador.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/forms.py" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_departamento.html" />
         <option value="$PROJECT_DIR$/app_maxliga/static/js/sb-admin-2.js" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_tipo_ponto.html" />
         <option value="$PROJECT_DIR$/projeto_maxliga/settings.py" />
         <option value="$PROJECT_DIR$/app_maxliga/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_avaliacoes.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/base.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_ligas.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_liga.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_departamentos.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_colaboradores.html" />
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/sem_permissao.html" />
-        <option value="$PROJECT_DIR$/app_maxliga/urls.py" />
-        <option value="$PROJECT_DIR$/app_maxliga/views.py" />
         <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_avaliacoes.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_avaliacoes.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/avaliacao_delete_confirm.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_tipo_ponto.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/tipo_ponto_delete_confirm.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/liga_delete_confirm.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_liga.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/forms.py" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_departamentos.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/nova_avaliacao.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_tipo_ponto.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_liga.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_departamento.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_colaborador.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_colaborador_confirm.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_departamento_confirm.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_liga_confirm.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_tipo_ponto_confirm.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/urls.py" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_ligas.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/views.py" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/ranking_liga.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_avaliacao_confirm.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_colaboradores.html" />
+        <option value="$PROJECT_DIR$/app_maxliga/templates/base.html" />
       </list>
     </option>
   </component>
@@ -203,7 +188,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,30 +206,24 @@
               <item name="app_maxliga" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MaxLiga" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MaxLiga" type="462c0819:PsiDirectoryNode" />
-              <item name="app_maxliga" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="app_maxliga" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga\static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga\templates" />
       <recent name="D:\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Faculdade\2019-2\Tópicos Especiais\MaxLiga\app_maxliga\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -277,18 +255,18 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21502976" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18377976" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32714286" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32615384" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.28285715" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.28153846" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -296,18 +274,18 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21502976" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18377976" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32714286" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32615384" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.28285715" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.28153846" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -336,34 +314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_tipo_ponto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" lean-forward="true" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_liga.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="58" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_colaborador.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_departamento.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="67" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_maxliga/static/js/sb-admin-2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -385,13 +335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/nova_avaliacao.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -399,110 +342,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="131" column="64" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_tipo_ponto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="1" column="25" lean-forward="true" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_liga.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_departamentos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_colaboradores.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_ligas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#a#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/sem_permissao.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_avaliacoes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="44" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#1;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_maxliga/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5372">
-          <caret line="316" lean-forward="true" selection-start-line="316" selection-end-line="316" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <marker date="1572533371389" expanded="true" signature="348:351" ph="..." />
-            <marker date="1572533371389" expanded="true" signature="7903:7904" ph="..." />
-            <marker date="1572533371389" expanded="true" signature="8908:8913" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/sem_permissao.html" />
     <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_avaliacoes.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -513,6 +353,172 @@
             <element signature="n#style#0;n#p#4;n#div#2;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#3;n#div#2;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_tipo_ponto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_liga.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="54" column="74" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_departamentos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/nova_avaliacao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_tipo_ponto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_liga.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_departamento.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/cadastro_colaborador.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_colaborador_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_departamento_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_liga_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_tipo_ponto_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/minhas_ligas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_avaliacoes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/ranking_liga.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/lista_colaboradores.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/app_maxliga/delete_avaliacao_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="115" selection-start-line="7" selection-start-column="115" selection-end-line="7" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="569" column="38" selection-start-line="569" selection-start-column="38" selection-end-line="569" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_maxliga/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
         </state>
       </provider>
     </entry>
