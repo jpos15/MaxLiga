@@ -562,11 +562,18 @@ def ranking_liga(request, id):
     user = request.user.id
     colaborador = Colaborador.objects.get(usuario=user)
 
-    lista_ranking = Colaborador.objects.filter(liga=id).order_by('-pontuacao')
-    print(lista_ranking)
+    ranking = Colaborador.objects.filter(liga=id).order_by('-pontuacao')
+    lista_ranking = []
+    cont = 1
+
+    for posicao in ranking:
+        lista_posicao = [cont, posicao.nome, posicao.pontuacao]
+        lista_ranking.append(lista_posicao)
+        cont +=1
 
     data = {
         'colaborador': colaborador,
+        'ranking': ranking,
         'lista_ranking': lista_ranking
     }
     return render(request, 'app_maxliga/ranking_liga.html', data)
